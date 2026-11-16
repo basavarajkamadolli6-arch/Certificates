@@ -2,727 +2,918 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Certificates and achievements of Basavaraj Kamadolli">
-<title>Basavaraj Kamadolli | Certificate Universe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050816">
+  <title>Basavaraj Kamadolli | Certificates & Portfolio</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-:root {
-  --blue: #00d9ff;
-  --light-blue: #65eaff;
-  --purple: #8175ff;
-  --background: #030712;
-  --card: rgba(10, 24, 48, 0.78);
-  --white: #eefaff;
-}
+  <style>
+    :root {
+      --bg: #050816;
+      --card: rgba(12, 23, 48, 0.78);
+      --blue: #00c8ff;
+      --blue2: #287bff;
+      --purple: #8b5cf6;
+      --text: #edf6ff;
+      --muted: #9aacc8;
+      --border: rgba(0, 200, 255, 0.22);
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 15%, rgba(0, 105, 255, .16), transparent 35%),
+        radial-gradient(ellipse at 85% 35%, rgba(105, 45, 255, .13), transparent 35%),
+        radial-gradient(ellipse at 50% 90%, rgba(0, 200, 255, .09), transparent 40%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--white);
-  background:
-    radial-gradient(ellipse at 50% 0%, #102e57 0%, transparent 48%),
-    radial-gradient(ellipse at 90% 60%, #101746 0%, transparent 40%),
-    var(--background);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+    #stars {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
 
-/* STAR BACKGROUND */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.stars,
-.stars::before,
-.stars::after {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  content: "";
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-    radial-gradient(1px 1px at 90px 90px, #65eaff, transparent),
-    radial-gradient(2px 2px at 160px 140px, #fff, transparent),
-    radial-gradient(1px 1px at 230px 50px, #00d9ff, transparent),
-    radial-gradient(2px 2px at 300px 180px, #fff, transparent);
-  background-size: 350px 250px;
-  animation: starsMove 80s linear infinite;
-}
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: rgba(5, 8, 22, .82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
 
-.stars::before {
-  opacity: .5;
-  transform: scale(1.4);
-  animation: starsMove 120s linear infinite reverse;
-}
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--blue);
+      text-shadow: 0 0 15px rgba(0, 200, 255, .65);
+    }
 
-.stars::after {
-  opacity: .3;
-  transform: scale(1.8);
-}
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
 
-@keyframes starsMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-250px); }
-}
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13px;
+      transition: .3s;
+    }
 
-/* NAVBAR */
+    .nav-links a:hover {
+      color: var(--blue);
+      text-shadow: 0 0 12px var(--blue);
+    }
 
-header {
-  width: 100%;
-  padding: 20px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(3, 7, 18, .75);
-  border-bottom: 1px solid rgba(0, 217, 255, .25);
-  backdrop-filter: blur(15px);
-  position: relative;
-  z-index: 5;
-}
+    .hero {
+      min-height: 430px;
+      padding: 100px 20px 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--blue);
-  text-shadow: 0 0 15px var(--blue);
-}
+    .hero-tag {
+      color: var(--blue);
+      border: 1px solid var(--border);
+      background: rgba(0, 200, 255, .07);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
 
-.nav-link {
-  color: var(--white);
-  text-decoration: none;
-  border: 1px solid rgba(0, 217, 255, .5);
-  padding: 9px 17px;
-  border-radius: 30px;
-  font-size: 13px;
-  transition: .3s;
-}
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(30px, 6vw, 58px);
+      font-weight: 800;
+      line-height: 1.25;
+      background: linear-gradient(90deg, #ffffff, #00d5ff, #648aff, #b28cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 20px rgba(0, 180, 255, .25));
+    }
 
-.nav-link:hover {
-  background: var(--blue);
-  color: #00111e;
-  box-shadow: 0 0 20px var(--blue);
-}
+    .hero h2 {
+      color: #b9d6ff;
+      font-size: clamp(15px, 2vw, 20px);
+      font-weight: 400;
+      margin-top: 18px;
+    }
 
-/* HERO */
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-top: 15px;
+    }
 
-.hero {
-  min-height: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 65px 20px 55px;
-  position: relative;
-}
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
 
-.eyebrow {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 11px;
-  letter-spacing: 5px;
-  color: var(--light-blue);
-  margin-bottom: 22px;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 22px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: .3s;
+      cursor: pointer;
+    }
 
-.hero h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(28px, 5vw, 53px);
-  line-height: 1.3;
-  font-weight: 800;
-  background: linear-gradient(90deg, #fff, #00d9ff, #9b8cff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 16px rgba(0,217,255,.35));
-}
+    .btn-primary {
+      color: #00101c;
+      background: linear-gradient(100deg, var(--blue), #6395ff);
+      box-shadow: 0 0 20px rgba(0, 200, 255, .22);
+    }
 
-.hero h2 {
-  font-size: clamp(17px, 3vw, 23px);
-  margin-top: 15px;
-  font-weight: 500;
-  color: #b5dfff;
-}
+    .btn-outline {
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      background: rgba(0, 200, 255, .05);
+    }
 
-.hero p {
-  color: #8da9c9;
-  max-width: 620px;
-  margin-top: 15px;
-  font-size: 14px;
-  line-height: 1.8;
-}
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 24px rgba(0, 200, 255, .4);
+    }
 
-.hero-line {
-  height: 2px;
-  width: 100px;
-  background: var(--blue);
-  box-shadow: 0 0 15px var(--blue);
-  margin-top: 30px;
-}
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 65px 25px;
+    }
 
-/* MAIN */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 35px 22px 75px;
-}
+    .section-heading .eyebrow {
+      color: var(--blue);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 38px;
-}
+    .section-heading h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(22px, 4vw, 32px);
+      color: white;
+    }
 
-.section-heading h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(22px, 4vw, 30px);
-  color: var(--blue);
-  text-shadow: 0 0 15px rgba(0,217,255,.55);
-}
+    .section-heading p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 12px;
+    }
 
-.section-heading p {
-  color: #829dbb;
-  margin-top: 10px;
-  font-size: 13px;
-}
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 750px;
+      margin: 0 auto;
+    }
 
-#status {
-  text-align: center;
-  color: var(--light-blue);
-  font-size: 13px;
-  margin-bottom: 25px;
-}
+    .stat-card {
+      padding: 22px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 13px;
+      box-shadow: inset 0 0 20px rgba(0, 150, 255, .035);
+    }
 
-/* CERTIFICATE GRID */
+    .stat-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 25px;
+      color: var(--blue);
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 28px;
-}
+    .stat-card p {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 6px;
+    }
 
-/* GLASS CARD */
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
 
-.card {
-  background: var(--card);
-  border: 1px solid rgba(0,217,255,.28);
-  border-radius: 16px;
-  overflow: hidden;
-  backdrop-filter: blur(15px);
-  box-shadow:
-    0 0 15px rgba(0,217,255,.06),
-    inset 0 0 15px rgba(0,217,255,.025);
-  transition: transform .35s, box-shadow .35s, border-color .35s;
-  animation: cardAppear .7s ease both;
-}
+    .certificate-card {
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      transition: .35s;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .18);
+    }
 
-@keyframes cardAppear {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .certificate-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--blue);
+      box-shadow: 0 0 25px rgba(0, 190, 255, .17);
+    }
 
-.card:hover {
-  transform: translateY(-9px);
-  border-color: var(--blue);
-  box-shadow:
-    0 0 12px rgba(0,217,255,.35),
-    0 0 35px rgba(0,217,255,.15);
-}
+    .certificate-image {
+      height: 190px;
+      overflow: hidden;
+      background: #0b1530;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  display: block;
-  padding: 12px;
-  background: rgba(0,0,0,.35);
-  border-bottom: 1px solid rgba(0,217,255,.2);
-}
+    .certificate-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+      transition: .4s;
+    }
 
-.card-content {
-  padding: 21px;
-}
+    .certificate-card:hover .certificate-image img {
+      transform: scale(1.04);
+    }
 
-.card h3 {
-  color: var(--light-blue);
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(0,217,255,.25);
-}
+    .certificate-info {
+      padding: 20px;
+    }
 
-.card p {
-  font-size: 13px;
-  color: #a5bad2;
-  line-height: 1.8;
-  min-height: 70px;
-}
+    .certificate-info h3 {
+      font-size: 16px;
+      color: #eaf8ff;
+      margin-bottom: 9px;
+    }
 
-.filename {
-  display: block;
-  color: #6585a8;
-  font-size: 10px;
-  margin-top: 10px;
-  word-break: break-word;
-}
+    .certificate-info p {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+      min-height: 58px;
+    }
 
-/* BUTTONS */
+    .certificate-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 17px;
+    }
 
-.actions {
-  display: flex;
-  gap: 11px;
-  margin-top: 20px;
-}
+    .certificate-actions .btn {
+      flex: 1;
+      padding: 9px 10px;
+      font-size: 11px;
+    }
 
-.actions a {
-  flex: 1;
-  padding: 11px 8px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 600;
-  transition: .3s;
-}
+    .resume-section {
+      max-width: 950px;
+      margin: auto;
+      padding: 30px 25px 80px;
+    }
 
-.view {
-  color: #00121f;
-  background: linear-gradient(90deg, #00d9ff, #6aebff);
-  box-shadow: 0 0 12px rgba(0,217,255,.25);
-}
+    .resume-card {
+      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      box-shadow: 0 0 35px rgba(0, 150, 255, .08);
+    }
 
-.view:hover {
-  box-shadow: 0 0 23px var(--blue);
-  transform: scale(1.04);
-}
+    .resume-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
 
-.download {
-  color: var(--light-blue);
-  border: 1px solid rgba(0,217,255,.55);
-  background: rgba(0,217,255,.06);
-}
+    .resume-top h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--blue);
+      font-size: 17px;
+    }
 
-.download:hover {
-  background: rgba(0,217,255,.2);
-  box-shadow: 0 0 15px rgba(0,217,255,.3);
-}
+    .resume-top p {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 7px;
+    }
 
-/* EMPTY AND ERROR STATES */
+    .resume-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.empty {
-  text-align: center;
-  padding: 50px 15px;
-  color: #a5bad2;
-  grid-column: 1 / -1;
-}
+    .resume-preview {
+      width: 100%;
+      height: 650px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: white;
+    }
 
-/* FOOTER */
+    .about-card {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
 
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  background: rgba(3,7,18,.85);
-  border-top: 1px solid rgba(0,217,255,.25);
-  color: #8da9c9;
-  font-size: 12px;
-}
+    .about-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
 
-footer strong {
-  color: var(--blue);
-}
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
 
-footer .footer-small {
-  margin-top: 8px;
-  color: #57718f;
-  font-size: 11px;
-}
+    .social-links a {
+      border: 1px solid var(--border);
+      color: var(--blue);
+      border-radius: 8px;
+      padding: 9px 15px;
+      font-size: 11px;
+      transition: .3s;
+    }
 
-/* MOBILE */
+    .social-links a:hover {
+      background: rgba(0, 200, 255, .12);
+      box-shadow: 0 0 15px rgba(0, 200, 255, .2);
+    }
 
-@media (max-width: 600px) {
-  header {
-    padding: 17px 5%;
-  }
+    .loading, .empty-state {
+      text-align: center;
+      color: var(--muted);
+      padding: 45px 15px;
+      font-size: 13px;
+      line-height: 2;
+    }
 
-  .logo {
-    font-size: 14px;
-  }
+    .loading span {
+      color: var(--blue);
+    }
 
-  .hero {
-    min-height: 330px;
-  }
+    .footer {
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+    }
 
-  .container {
-    padding: 30px 16px 55px;
-  }
+    .footer span {
+      color: var(--blue);
+    }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+    @media (max-width: 650px) {
+      .navbar {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 14px;
+      }
 
-  .card img {
-    height: 200px;
-  }
-}
+      .nav-links {
+        gap: 17px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-</style>
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding-top: 75px;
+      }
+
+      .stats {
+        gap: 9px;
+      }
+
+      .stat-card h3 {
+        font-size: 20px;
+      }
+
+      .stat-card p {
+        font-size: 9px;
+      }
+
+      .resume-preview {
+        height: 480px;
+      }
+
+      .resume-card {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="stars"></div>
-
-<header>
-  <div class="logo">BASAVARAJ KAMADOLLI</div>
-
-  <a class="nav-link"
-     href="https://github.com/basavarajkamadolli6-arch"
-     target="_blank"
-     rel="noopener noreferrer">
-    GitHub Profile ↗
-  </a>
-</header>
-
-<section class="hero">
-
-  <div class="eyebrow">MY DIGITAL UNIVERSE</div>
-
-  <h1>Certificates & Achievements</h1>
-
-  <h2>Basavaraj Kamadolli</h2>
-
-  <p>
-    Welcome to my certificate universe. Explore my learning journey,
-    technical achievements and continuous growth in technology.
-  </p>
-
-  <div class="hero-line"></div>
-
-</section>
-
-<main class="container">
-
-  <div class="section-heading">
-    <h2>✦ My Learning Collection ✦</h2>
-    <p>A collection of knowledge, skills and achievements.</p>
-  </div>
-
-  <p id="status">Initializing certificate universe...</p>
-
-  <section class="grid" id="certificateGrid"></section>
-
-</main>
-
-<footer>
-  <p>© <span id="year"></span> <strong>Basavaraj Kamadolli</strong></p>
-  <p class="footer-small">Designed in the Neon Blue Universe ✦</p>
-</footer>
-
-<script>
-
-// GITHUB REPOSITORY SETTINGS
-
-const OWNER = "basavarajkamadolli6-arch";
-const REPO = "Certificates";
-const BRANCH = "main";
-
-const API_URL =
-  `https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`;
-
-const RAW_URL =
-  `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/`;
-
-// CUSTOM CERTIFICATE TITLES AND DESCRIPTIONS
-
-const certificateDetails = {
-  "ML.png": {
-    title: "Machine Learning",
-    description:
-      "Certificate related to Machine Learning, covering concepts and techniques used to build systems that learn from data."
-  },
-
-  "ML.jpg": {
-    title: "Machine Learning",
-    description:
-      "Certificate related to Machine Learning, covering concepts and techniques used to build systems that learn from data."
-  },
-
-  "Java.png": {
-    title: "Java Programming",
-    description:
-      "Certificate related to Java Programming, demonstrating learning in programming concepts and Java development."
-  },
-
-  "Java.jpg": {
-    title: "Java Programming",
-    description:
-      "Certificate related to Java Programming, demonstrating learning in programming concepts and Java development."
-  }
-};
-
-// FULL TITLES FROM SHORT FILENAMES
-
-function makeTitle(filename) {
-  const name = filename
-    .split("/")
-    .pop()
-    .replace(/\.[^/.]+$/, "")
-    .replace(/[_-]+/g, " ")
-    .trim();
-
-  const names = {
-    "ml": "Machine Learning",
-    "ai": "Artificial Intelligence",
-    "java": "Java Programming",
-    "python": "Python Programming",
-    "html": "HTML",
-    "css": "CSS",
-    "js": "JavaScript",
-    "web development": "Web Development",
-    "data science": "Data Science",
-    "cpp": "C++ Programming",
-    "c programming": "C Programming",
-    "sql": "SQL",
-    "cloud computing": "Cloud Computing"
-  };
-
-  return names[name.toLowerCase()] ||
-    name.replace(/\b\w/g, letter => letter.toUpperCase());
-}
-
-// DESCRIPTIONS
-
-function makeDescription(title) {
-  const descriptions = {
-    "Machine Learning":
-      "Certificate related to Machine Learning and techniques used to build systems that learn from data.",
-
-    "Artificial Intelligence":
-      "Certificate related to Artificial Intelligence and its applications in modern technology.",
-
-    "Java Programming":
-      "Certificate related to Java programming, software development and programming fundamentals.",
-
-    "Python Programming":
-      "Certificate related to Python programming and its applications in software development.",
-
-    "Web Development":
-      "Certificate related to website development and modern web technologies.",
-
-    "Data Science":
-      "Certificate related to Data Science and the use of data analysis techniques.",
-
-    "Cloud Computing":
-      "Certificate related to cloud computing concepts and cloud-based technologies.",
-
-    "HTML":
-      "Certificate related to HTML and the structure of web pages.",
-
-    "CSS":
-      "Certificate related to CSS and the styling of web pages.",
-
-    "JavaScript":
-      "Certificate related to JavaScript and interactive web development.",
-
-    "C Programming":
-      "Certificate related to C programming and fundamental programming concepts.",
-
-    "SQL":
-      "Certificate related to SQL and database management concepts."
-  };
-
-  return descriptions[title] ||
-    `Certificate demonstrating learning or achievement in ${title}.`;
-}
-
-// ELEMENTS
-
-const grid = document.getElementById("certificateGrid");
-const statusText = document.getElementById("status");
-
-// LOAD CERTIFICATES
-
-async function loadCertificates() {
-
-  try {
-
-    const response = await fetch(API_URL);
-
-    if (!response.ok) {
-      throw new Error(
-        "Unable to access GitHub. Check that your repository is public and the branch is correct."
-      );
-    }
-
-    const data = await response.json();
-
-    if (data.truncated) {
-      throw new Error("The GitHub file listing was incomplete.");
-    }
-
-    const allowedExtensions = /\.(png|jpe?g|webp|gif)$/i;
-
-    const files = data.tree.filter(file =>
-      file.type === "blob" &&
-      allowedExtensions.test(file.path)
-    );
-
-    const certificates = files.map(file => {
-
-      const filename = file.path.split("/").pop();
-
-      const custom =
-        certificateDetails[filename] ||
-        certificateDetails[file.path];
-
-      const title = custom?.title || makeTitle(filename);
-
-      const description =
-        custom?.description || makeDescription(title);
-
-      return {
-        filename,
-        path: file.path,
-        title,
-        description,
-        image: RAW_URL +
-          file.path.split("/").map(encodeURIComponent).join("/")
-      };
-
-    });
-
-    certificates.sort((a, b) =>
-      a.title.localeCompare(b.title)
-    );
-
-    statusText.textContent =
-      `${certificates.length} certificate(s) discovered in my universe`;
-
-    displayCertificates(certificates);
-
-    if (certificates.length === 0) {
-      statusText.textContent =
-        "No certificate images found. Upload JPG, PNG or WEBP images to your repository.";
-    }
-
-  } catch (error) {
-
-    statusText.textContent = error.message;
-
-    console.error(error);
-
-  }
-
-}
-
-// DISPLAY CERTIFICATES
-
-function displayCertificates(certificates) {
-
-  grid.innerHTML = "";
-
-  if (certificates.length === 0) {
-
-    grid.innerHTML = `
-      <div class="empty">
-        <h3>Certificate universe is empty</h3>
-        <p>Upload your certificates to GitHub to display them here.</p>
+  <canvas id="stars"></canvas>
+
+  <nav class="navbar">
+    <a href="#" class="logo">BK.PORTFOLIO</a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#resume">Resume</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-tag">WELCOME TO MY DIGITAL SPACE</div>
+
+    <h1>BASAVARAJ KAMADOLLI</h1>
+
+    <h2>BCA Student | Aspiring Software Developer</h2>
+
+    <p>
+      Welcome to my professional portfolio. Explore my certifications,
+      learning journey, technical interests and projects in technology.
+      I am passionate about Web Development, Python, Full Stack Development
+      and UI/UX Design.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#certificates" class="btn btn-primary">Explore Certificates</a>
+      <a href="#resume" class="btn btn-outline">View My Resume</a>
+    </div>
+  </header>
+
+  <section class="section" id="overview">
+    <div class="section-heading">
+      <div class="eyebrow">MY JOURNEY</div>
+      <h2>Portfolio Overview</h2>
+      <p>A collection of my learning achievements and professional profile.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <h3 id="certificateCount">...</h3>
+        <p>Certificates</p>
       </div>
-    `;
 
-    return;
-  }
+      <div class="stat-card">
+        <h3>04+</h3>
+        <p>Projects</p>
+      </div>
 
-  certificates.forEach((certificate, index) => {
+      <div class="stat-card">
+        <h3>BCA</h3>
+        <p>Education</p>
+      </div>
+    </div>
+  </section>
 
-    const card = document.createElement("article");
-    card.className = "card";
-    card.style.animationDelay = `${Math.min(index * 0.08, 0.8)}s`;
+  <section class="section" id="certificates">
+    <div class="section-heading">
+      <div class="eyebrow">MY ACHIEVEMENTS</div>
+      <h2>My Certificates</h2>
+      <p>Explore my certifications and the skills I have been learning.</p>
+    </div>
 
-    const image = document.createElement("img");
-    image.src = certificate.image;
-    image.alt = certificate.title;
-    image.loading = "lazy";
+    <div id="certificateGrid" class="certificate-grid">
+      <div class="loading">
+        <span>✦</span> Loading certificates from GitHub...
+      </div>
+    </div>
+  </section>
 
-    image.onerror = () => {
-      image.alt = "Certificate image could not be loaded";
-      image.style.display = "none";
+  <section id="resume" class="resume-section">
+    <div class="section-heading">
+      <div class="eyebrow">PROFESSIONAL PROFILE</div>
+      <h2>My Resume</h2>
+      <p>View my education, technical skills, projects and certifications.</p>
+    </div>
+
+    <div class="resume-card">
+      <div class="resume-top">
+        <div>
+          <h3>Basavaraj Kamadolli</h3>
+          <p>BCA Student | Aspiring Software Developer</p>
+        </div>
+
+        <div class="resume-actions">
+          <a href="./basu_new_final.pdf" target="_blank" class="btn btn-outline">
+            Open Resume
+          </a>
+
+          <a href="./basu_new_final.pdf" download class="btn btn-primary">
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      <iframe
+        class="resume-preview"
+        src="./basu_new_final.pdf"
+        title="Basavaraj Kamadolli Resume">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-heading">
+      <div class="eyebrow">GET TO KNOW ME</div>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-card">
+      <p>
+        I am Basavaraj Kamadolli, a Bachelor of Computer Applications (BCA)
+        student at KLE Society's GH BCA College, Haveri. I am interested in
+        building useful digital solutions and improving my technical skills.
+        My areas of interest include Python, Web Development, Full Stack
+        Development, UI/UX Design and Cross-Platform Development.
+      </p>
+
+      <div class="social-links">
+        <a href="https://github.com/basavarajkamadolli6-arch"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+
+        <a href="https://www.linkedin.com/in/basavaraj-kamadolli-305327335/"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <a href="mailto:basavarajkamadolli6@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed & Developed by <span>Basavaraj Kamadolli</span></p>
+    <p>© <span id="year"></span> | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // ==========================================
+    // GITHUB CERTIFICATE SETTINGS
+    // ==========================================
+
+    const GITHUB_USERNAME = "basavarajkamadolli6-arch";
+    const REPOSITORY_NAME = "Certificates";
+    const BRANCH = "main";
+
+    const API_URL =
+      `https://api.github.com/repos/${GITHUB_USERNAME}/${REPOSITORY_NAME}/git/trees/${BRANCH}?recursive=1`;
+
+    const RAW_URL =
+      `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPOSITORY_NAME}/${BRANCH}/`;
+
+    // ==========================================
+    // CERTIFICATE TITLES AND DESCRIPTIONS
+    // Add more custom entries here when needed.
+    // ==========================================
+
+    const certificateDetails = {
+      "ml": {
+        title: "Machine Learning",
+        description:
+          "Certificate of achievement in Machine Learning, covering fundamental concepts and techniques used to build intelligent systems."
+      },
+
+      "machine learning": {
+        title: "Machine Learning",
+        description:
+          "Certificate of achievement in Machine Learning, covering fundamental concepts and techniques used to build intelligent systems."
+      },
+
+      "java": {
+        title: "Java Programming",
+        description:
+          "Certificate of achievement in Java Programming, demonstrating learning in programming fundamentals and object-oriented concepts."
+      },
+
+      "java programming": {
+        title: "Java Programming",
+        description:
+          "Certificate of achievement in Java Programming, demonstrating learning in programming fundamentals and object-oriented concepts."
+      },
+
+      "ui ux": {
+        title: "UI/UX Design",
+        description:
+          "Certificate of achievement in UI/UX Design, covering user interface principles, user experience and digital design concepts."
+      },
+
+      "ui ux design": {
+        title: "UI/UX Design",
+        description:
+          "Certificate of achievement in UI/UX Design, covering user interface principles, user experience and digital design concepts."
+      },
+
+      "uiux": {
+        title: "UI/UX Design",
+        description:
+          "Certificate of achievement in UI/UX Design, covering user interface principles, user experience and digital design concepts."
+      }
     };
 
-    const content = document.createElement("div");
-    content.className = "card-content";
+    // ==========================================
+    // TITLE FORMATTING
+    // ==========================================
 
-    const heading = document.createElement("h3");
-    heading.textContent = certificate.title;
+    function cleanName(filename) {
+      return filename
+        .replace(/\.[^/.]+$/, "")
+        .replace(/[_-]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .toLowerCase();
+    }
 
-    const description = document.createElement("p");
-    description.textContent = certificate.description;
+    function getCertificateDetails(filename) {
+      const key = cleanName(filename);
 
-    const filename = document.createElement("small");
-    filename.className = "filename";
-    filename.textContent = certificate.path;
+      if (certificateDetails[key]) {
+        return certificateDetails[key];
+      }
 
-    const actions = document.createElement("div");
-    actions.className = "actions";
+      const title = key
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 
-    const view = document.createElement("a");
-    view.className = "view";
-    view.href = certificate.image;
-    view.target = "_blank";
-    view.rel = "noopener noreferrer";
-    view.textContent = "View Certificate";
+      return {
+        title: title + " Certificate",
+        description:
+          `Certificate of achievement in ${title}. This certification represents learning, skill development and progress in this area.`
+      };
+    }
 
-    const download = document.createElement("a");
-    download.className = "download";
-    download.href = certificate.image;
-    download.download = certificate.filename;
-    download.textContent = "Download";
+    // ==========================================
+    // LOAD CERTIFICATES FROM GITHUB
+    // ==========================================
 
-    actions.append(view, download);
+    async function loadCertificates() {
+      const grid = document.getElementById("certificateGrid");
+      const count = document.getElementById("certificateCount");
 
-    content.append(
-      heading,
-      description,
-      filename,
-      actions
-    );
+      try {
+        const response = await fetch(API_URL);
 
-    card.append(image, content);
+        if (!response.ok) {
+          throw new Error(
+            response.status === 403
+              ? "GitHub API rate limit reached. Please try again later."
+              : "Unable to access the GitHub repository."
+          );
+        }
 
-    grid.appendChild(card);
+        const data = await response.json();
 
-  });
+        const imageExtensions = [
+          ".jpg", ".jpeg", ".png", ".webp"
+        ];
 
-}
+        const files = (data.tree || []).filter(file => {
+          if (file.type !== "blob") return false;
 
-// FOOTER YEAR
+          const path = file.path.toLowerCase();
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+          return imageExtensions.some(ext => path.endsWith(ext));
+        });
 
-// START WEBSITE
+        if (files.length === 0) {
+          count.textContent = "0";
+          grid.innerHTML = `
+            <div class="empty-state">
+              No certificate images were found.<br>
+              Upload your certificate images to the GitHub repository.
+            </div>
+          `;
+          return;
+        }
 
-loadCertificates();
+        // Sort certificates alphabetically by filename.
+        files.sort((a, b) => a.path.localeCompare(b.path));
 
-</script>
+        count.textContent = files.length;
+
+        grid.innerHTML = files.map(file => {
+          const filename = file.path.split("/").pop();
+          const details = getCertificateDetails(filename);
+
+          const imageUrl = RAW_URL +
+            file.path.split("/").map(encodeURIComponent).join("/");
+
+          const safeImageUrl = imageUrl.replace(/&/g, "&amp;")
+                                       .replace(/"/g, "&quot;");
+
+          const safeTitle = escapeHTML(details.title);
+          const safeDescription = escapeHTML(details.description);
+
+          return `
+            <article class="certificate-card">
+              <div class="certificate-image">
+                <img
+                  src="${safeImageUrl}"
+                  alt="${safeTitle}"
+                  loading="lazy"
+                  onerror="this.alt='Certificate image unavailable'; this.style.display='none';"
+                >
+              </div>
+
+              <div class="certificate-info">
+                <h3>${safeTitle}</h3>
+                <p>${safeDescription}</p>
+
+                <div class="certificate-actions">
+                  <a
+                    href="${safeImageUrl}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline">
+                    View
+                  </a>
+
+                  <a
+                    href="${safeImageUrl}"
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    Download
+                  </a>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+
+      } catch (error) {
+        console.error("Certificate loading error:", error);
+
+        count.textContent = "—";
+
+        grid.innerHTML = `
+          <div class="empty-state">
+            <span style="color:#00c8ff">Unable to load certificates.</span>
+            <br>
+            ${escapeHTML(error.message)}
+            <br><br>
+            Please check the repository name, branch and internet connection.
+          </div>
+        `;
+      }
+    }
+
+    // Escape text before inserting GitHub filenames/descriptions into HTML.
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[char]);
+    }
+
+    // ==========================================
+    // ANIMATED SPACE STARS
+    // ==========================================
+
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+
+    let stars = [];
+
+    function resizeCanvas() {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+      canvas.width = window.innerWidth * ratio;
+      canvas.height = window.innerHeight * ratio;
+
+      canvas.style.width = window.innerWidth + "px";
+      canvas.style.height = window.innerHeight + "px";
+
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+      createStars();
+    }
+
+    function createStars() {
+      stars = [];
+
+      const total = Math.min(
+        180,
+        Math.floor(window.innerWidth / 5)
+      );
+
+      for (let i = 0; i < total; i++) {
+        stars.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          radius: Math.random() * 1.5 + 0.3,
+          speed: Math.random() * 0.25 + 0.05,
+          opacity: Math.random() * 0.8 + 0.2
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      stars.forEach(star => {
+        ctx.beginPath();
+
+        ctx.arc(
+          star.x,
+          star.y,
+          star.radius,
+          0,
+          Math.PI * 2
+        );
+
+        ctx.fillStyle = `rgba(110, 205, 255, ${star.opacity})`;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = "#00c8ff";
+        ctx.fill();
+
+        star.y -= star.speed;
+
+        if (star.y < 0) {
+          star.y = window.innerHeight;
+          star.x = Math.random() * window.innerWidth;
+        }
+      });
+
+      requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+
+    resizeCanvas();
+    animateStars();
+
+    // ==========================================
+    // FOOTER AND STARTUP
+    // ==========================================
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    loadCertificates();
+  </script>
 
 </body>
 </html>
