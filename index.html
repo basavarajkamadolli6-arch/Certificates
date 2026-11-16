@@ -7,324 +7,258 @@
 
 <title>Certificates | Basavaraj Kamadolli</title>
 
-<meta name="description" content="Explore the certificates, achievements, technical training and learning journey of Basavaraj Kamadolli, BCA student and aspiring software developer.">
-
-<meta name="theme-color" content="#101b35">
+<meta name="description" content="Explore the certificates, technical skills, courses and learning achievements of Basavaraj Kamadolli, BCA student and aspiring software developer.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --blue: #315eea;
-  --dark: #101b35;
-  --muted: #718096;
-  --bg: #f5f7fc;
-  --border: #e8edf5;
-  --white: #fff;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-html { scroll-behavior: smooth; }
 
 body {
-  font-family: Inter, sans-serif;
-  background: var(--bg);
-  color: var(--dark);
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fc;
+    color: #17213a;
 }
 
-a { text-decoration: none; }
-
 nav {
-  height: 75px;
-  padding: 0 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  border-bottom: 1px solid var(--border);
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5eaf2;
 }
 
 .logo {
-  font-size: 21px;
-  font-weight: 800;
+    font-size: 20px;
+    font-weight: 800;
+    color: #17213a;
 }
 
-.logo span { color: var(--blue); }
+.logo span {
+    color: #315eea;
+}
 
 nav a {
-  color: #526078;
-  font-size: 13px;
-  font-weight: 600;
-  margin-left: 23px;
+    color: #315eea;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .hero {
-  padding: 90px 8%;
-  color: white;
-  background:
-    radial-gradient(circle at 85% 15%, #557eff 0, transparent 30%),
-    linear-gradient(120deg, #101b35, #193e8d, #315eea);
-}
-
-.hero-content { max-width: 780px; }
-
-.tag {
-  display: inline-block;
-  padding: 9px 15px;
-  border: 1px solid #ffffff55;
-  border-radius: 30px;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
+    padding: 65px 8%;
+    background: linear-gradient(120deg, #101b35, #244caa, #315eea);
+    color: white;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 6vw, 62px);
-  line-height: 1.15;
-  margin-bottom: 22px;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 15px;
 }
 
-.hero h1 span { color: #a9c5ff; }
+.hero h1 span {
+    color: #b5ceff;
+}
 
 .hero p {
-  max-width: 650px;
-  color: #e0eaff;
-  line-height: 1.9;
-  font-size: 15px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.btn {
-  padding: 14px 21px;
-  border-radius: 9px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.primary {
-  background: white;
-  color: var(--blue);
-}
-
-.secondary {
-  border: 1px solid #ffffff80;
-  color: white;
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #e2eaff;
 }
 
 .container {
-  max-width: 1200px;
-  padding: 55px 25px;
-  margin: auto;
+    max-width: 1150px;
+    margin: auto;
+    padding: 55px 22px;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.heading {
+    margin-bottom: 25px;
 }
 
-.stat {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 25px;
-  box-shadow: 0 8px 25px #17294d08;
+.heading h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
 }
 
-.stat h2 {
-  color: var(--blue);
-  font-size: 30px;
-}
-
-.stat p {
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 7px;
-}
-
-.section {
-  margin-top: 65px;
-}
-
-.section h2 {
-  font-size: 29px;
-  margin-bottom: 10px;
-}
-
-.section-intro {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 28px;
+.heading p {
+    font-size: 13px;
+    color: #718096;
+    line-height: 1.7;
 }
 
 .toolbar {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 27px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
-.toolbar input, .toolbar select {
-  padding: 14px;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  background: white;
-  font: inherit;
-  font-size: 13px;
-  outline: none;
+input, select {
+    padding: 13px;
+    border: 1px solid #dfe5ef;
+    border-radius: 8px;
+    background: white;
+    font-size: 13px;
+    outline: none;
 }
 
-.toolbar input { flex: 1; min-width: 0; }
+input {
+    flex: 1;
+    min-width: 0;
+}
 
-.toolbar input:focus, .toolbar select:focus {
-  border-color: var(--blue);
+input:focus, select:focus {
+    border-color: #315eea;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 23px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: .25s;
+    background: white;
+    border: 1px solid #e5eaf2;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .25s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px #182d5718;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px #17213a15;
 }
 
 .preview {
-  height: 215px;
-  background: #eaf0ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    height: 210px;
+    background: #edf2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: white;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: white;
 }
 
-.pdf-preview {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: white;
+.pdf-icon {
+    font-size: 45px;
+    font-weight: 800;
+    color: #315eea;
 }
 
-.card-body { padding: 20px; }
+.card-body {
+    padding: 18px;
+}
 
 .category {
-  font-size: 10px;
-  color: var(--blue);
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+    color: #315eea;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .7px;
 }
 
 .card h3 {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 12px 0;
-  overflow-wrap: anywhere;
+    font-size: 15px;
+    margin: 10px 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .card p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-  min-height: 65px;
+    font-size: 12px;
+    color: #718096;
+    line-height: 1.7;
+    min-height: 60px;
 }
 
 .actions {
-  display: flex;
-  gap: 9px;
-  margin-top: 17px;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .actions a {
-  flex: 1;
-  padding: 11px 5px;
-  text-align: center;
-  border-radius: 7px;
-  font-size: 11px;
-  font-weight: 700;
+    flex: 1;
+    text-align: center;
+    padding: 11px 5px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .view {
-  background: var(--blue);
-  color: white;
+    background: #315eea;
+    color: white;
 }
 
 .download {
-  background: #edf2ff;
-  color: var(--blue);
+    background: #edf2ff;
+    color: #315eea;
 }
 
 .empty {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  padding: 55px 20px;
-  text-align: center;
-  color: var(--muted);
-  grid-column: 1 / -1;
-  line-height: 1.8;
-}
-
-.empty h3 {
-  color: var(--dark);
-  margin-bottom: 10px;
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    background: white;
+    text-align: center;
+    border-radius: 12px;
+    color: #718096;
+    line-height: 1.8;
 }
 
 footer {
-  padding: 40px 20px;
-  text-align: center;
-  background: var(--dark);
-  color: white;
-  font-size: 13px;
-  line-height: 2.2;
+    background: #101b35;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 12px;
 }
 
-footer a { color: #a9c5ff; }
-
-@media(max-width:850px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+@media(max-width: 850px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media(max-width:600px) {
-  nav { padding: 0 5%; }
-  nav a { margin-left: 9px; font-size: 11px; }
-  .hero { padding: 65px 6%; }
-  .container { padding: 40px 17px; }
-  .grid { grid-template-columns: 1fr; }
-  .toolbar { flex-direction: column; }
-  .stats { gap: 8px; }
-  .stat { padding: 15px 9px; }
-  .stat h2 { font-size: 23px; }
-  .stat p { font-size: 10px; }
+@media(max-width: 600px) {
+    nav {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .container {
+        padding: 40px 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
 }
 </style>
 </head>
@@ -332,334 +266,280 @@ footer a { color: #a9c5ff; }
 <body>
 
 <nav>
-  <div class="logo">BK<span>.</span> Certificates</div>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#certificates">Certificates</a>
+    <div class="logo">Basavaraj <span>Kamadolli.</span></div>
+
     <a href="https://github.com/basavarajkamadolli6-arch"
-       target="_blank">GitHub ↗</a>
-  </div>
+       target="_blank">
+        GitHub ↗
+    </a>
 </nav>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="tag">MY PROFESSIONAL LEARNING JOURNEY</div>
-
-    <h1>Learning Today.<br>
-      <span>Achieving Tomorrow.</span>
-    </h1>
-
+<section class="hero">
+    <h1>Basavaraj Kamadolli</h1>
     <p>
-      Hello! I'm Basavaraj Kamadolli, a Bachelor of Computer
-      Applications (BCA) student and aspiring software developer.
-      Welcome to my certificate portfolio, where I showcase my
-      learning achievements, technical certifications, courses
-      and continuous efforts to grow in the technology field.
+        My Certificates & Achievements
     </p>
-
-    <div class="hero-buttons">
-      <a href="#certificates" class="btn primary">
-        Explore Certificates →
-      </a>
-
-      <a href="https://github.com/basavarajkamadolli6-arch"
-         target="_blank" class="btn secondary">
-        My GitHub Profile
-      </a>
-    </div>
-  </div>
+    <p>
+        BCA Student | Aspiring Software Developer
+    </p>
 </section>
 
 <main class="container">
 
-  <div class="stats">
-    <div class="stat">
-      <h2 id="total">0</h2>
-      <p>Total certificates</p>
+    <div class="heading">
+        <h2>My Certificates</h2>
+        <p>
+            Explore my completed courses, technical certifications,
+            training programs and learning achievements.
+        </p>
     </div>
-
-    <div class="stat">
-      <h2 id="images">0</h2>
-      <p>Image certificates</p>
-    </div>
-
-    <div class="stat">
-      <h2 id="pdfs">0</h2>
-      <p>PDF certificates</p>
-    </div>
-  </div>
-
-  <section class="section" id="certificates">
-
-    <h2>My Certificates & Achievements</h2>
-
-    <p class="section-intro">
-      Every certificate represents a step forward in my learning
-      journey. Explore my technical knowledge, completed training
-      and professional development achievements.
-    </p>
 
     <div class="toolbar">
-      <input type="search" id="search"
-             placeholder="Search by certificate name or topic...">
+        <input
+            type="search"
+            id="search"
+            placeholder="Search certificates..."
+        >
 
-      <select id="filter">
-        <option value="all">All certificates</option>
-        <option value="image">Image certificates</option>
-        <option value="pdf">PDF certificates</option>
-      </select>
+        <select id="filter">
+            <option value="all">All Certificates</option>
+            <option value="image">Images</option>
+            <option value="pdf">PDFs</option>
+        </select>
     </div>
 
     <div class="grid" id="grid">
-      <div class="empty">
-        <h3>Loading certificates...</h3>
-        Please wait while your repository is scanned.
-      </div>
+        <div class="empty">Loading certificates...</div>
     </div>
 
-  </section>
 </main>
 
 <footer>
-  <h3>Basavaraj Kamadolli</h3>
-  <p>Learning • Growing • Building the Future</p>
-
-  <p>
-    <a href="https://github.com/basavarajkamadolli6-arch"
-       target="_blank">GitHub</a>
-    &nbsp; | &nbsp;
-    <a href="https://www.linkedin.com/in/basavaraj-kamadolli-305327335/"
-       target="_blank">LinkedIn</a>
-  </p>
-
-  <p>© <span id="year"></span> Basavaraj Kamadolli</p>
+    © <span id="year"></span> Basavaraj Kamadolli | Certificate Portfolio
 </footer>
 
 <script>
+
 const OWNER = "basavarajkamadolli6-arch";
 const REPO = "Certificates";
 const BRANCH = "main";
 
 const API =
-  `https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`;
+`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`;
 
 const RAW =
-  `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/`;
+`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/`;
 
-// Customize descriptions using the exact repository file path.
-// Example: "certificates/python_certificate.jpg"
-const customDescriptions = {
-  // "certificates/python_certificate.jpg": {
-  //   title: "Python Programming Certificate",
-  //   category: "Programming",
-  //   description: "Completed training in Python programming."
-  // }
+const descriptions = {
+    // Add verified certificate descriptions here.
+    // Example:
+    // "certificates/python.jpg": {
+    //     title: "Python Programming",
+    //     category: "Programming",
+    //     description: "Completed Python programming training."
+    // }
 };
 
 let certificates = [];
 
 const grid = document.getElementById("grid");
 
-function escapeHTML(value) {
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
-  })[char]);
+function safe(value) {
+    return String(value).replace(/[&<>"']/g, c => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+    })[c]);
 }
 
-function titleCase(filename) {
-  return filename
-    .replace(/\.[^.]+$/, "")
-    .replace(/[_-]+/g, " ")
-    .replace(/\b\w/g, char => char.toUpperCase());
+function formatTitle(filename) {
+    return filename
+        .replace(/\.[^.]+$/, "")
+        .replace(/[_-]+/g, " ")
+        .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-function guessCategory(name) {
-  const value = name.toLowerCase();
+function getCategory(filename) {
+    const name = filename.toLowerCase();
 
-  if (/python|java|javascript|programming|coding|c\+\+/.test(value))
-    return "Programming";
+    if (/python|java|javascript|programming|coding/.test(name))
+        return "Programming";
 
-  if (/web|html|css|frontend|backend/.test(value))
-    return "Web Development";
+    if (/html|css|web|frontend|backend/.test(name))
+        return "Web Development";
 
-  if (/data|analytics|sql|database/.test(value))
-    return "Data & Analytics";
+    if (/ai|artificial|machine|learning/.test(name))
+        return "AI & Technology";
 
-  if (/ai|artificial|machine|learning/.test(value))
-    return "AI & Technology";
+    if (/data|sql|database|analytics/.test(name))
+        return "Data & Analytics";
 
-  if (/cyber|security|network/.test(value))
-    return "Cybersecurity";
+    if (/cyber|security|network/.test(name))
+        return "Cybersecurity";
 
-  if (/cloud|aws|azure/.test(value))
-    return "Cloud Computing";
+    if (/cloud|aws|azure/.test(name))
+        return "Cloud Computing";
 
-  if (/workshop|seminar|event/.test(value))
-    return "Workshop & Events";
-
-  return "Learning Achievement";
-}
-
-function makeDescription(title, category) {
-  return `This certificate is part of my learning journey in ${category.toLowerCase()}. It represents my interest in developing knowledge and skills in ${title.toLowerCase()} and continuously improving my technical abilities.`;
+    return "Learning Achievement";
 }
 
 function render() {
-  const term =
-    document.getElementById("search").value.toLowerCase();
+    const search = document.getElementById("search")
+        .value.toLowerCase();
 
-  const type =
-    document.getElementById("filter").value;
+    const filter = document.getElementById("filter").value;
 
-  const filtered = certificates.filter(cert => {
-    const matches =
-      `${cert.title} ${cert.category} ${cert.description}`
-        .toLowerCase().includes(term);
+    const filtered = certificates.filter(cert => {
+        const matchSearch =
+            `${cert.title} ${cert.category} ${cert.description}`
+            .toLowerCase().includes(search);
 
-    return matches && (type === "all" || cert.type === type);
-  });
+        const matchFilter =
+            filter === "all" || cert.type === filter;
 
-  if (!filtered.length) {
-    grid.innerHTML = `
-      <div class="empty">
-        <h3>No certificates found</h3>
-        Try another search or upload certificates to GitHub.
-      </div>`;
-    return;
-  }
+        return matchSearch && matchFilter;
+    });
 
-  grid.innerHTML = filtered.map(cert => {
-    const preview = cert.type === "image"
-      ? `<img src="${cert.url}" alt="${escapeHTML(cert.title)}" loading="lazy">`
-      : `<iframe class="pdf-preview"
-          src="${cert.url}#toolbar=0&navpanes=0"
-          title="${escapeHTML(cert.title)}"></iframe>`;
+    if (!filtered.length) {
+        grid.innerHTML = `
+            <div class="empty">
+                <h3>No certificates found</h3>
+                Upload certificate images or PDFs to your
+                GitHub repository and commit the changes.
+            </div>
+        `;
+        return;
+    }
 
-    return `
-      <article class="card">
-        <div class="preview">${preview}</div>
+    grid.innerHTML = filtered.map(cert => {
 
-        <div class="card-body">
-          <span class="category">
-            ${escapeHTML(cert.category)}
-          </span>
+        const preview = cert.type === "image"
+            ? `<img src="${cert.url}"
+                    alt="${safe(cert.title)}"
+                    loading="lazy">`
+            : `<div class="pdf-icon">PDF</div>`;
 
-          <h3>${escapeHTML(cert.title)}</h3>
+        return `
+            <article class="card">
 
-          <p>${escapeHTML(cert.description)}</p>
+                <div class="preview">
+                    ${preview}
+                </div>
 
-          <div class="actions">
-            <a class="view"
-               href="${cert.url}"
-               target="_blank"
-               rel="noopener noreferrer">
-              View Certificate ↗
-            </a>
+                <div class="card-body">
 
-            <a class="download"
-               href="${cert.url}"
-               download="${escapeHTML(cert.filename)}">
-              Download ↓
-            </a>
-          </div>
-        </div>
-      </article>`;
-  }).join("");
+                    <span class="category">
+                        ${safe(cert.category)}
+                    </span>
+
+                    <h3>${safe(cert.title)}</h3>
+
+                    <p>${safe(cert.description)}</p>
+
+                    <div class="actions">
+
+                        <a class="view"
+                           href="${cert.url}"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                           View Certificate
+                        </a>
+
+                        <a class="download"
+                           href="${cert.url}"
+                           download="${safe(cert.filename)}">
+                           Download
+                        </a>
+
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join("");
 }
 
 async function loadCertificates() {
-  try {
-    const response = await fetch(API);
 
-    if (!response.ok) {
-      throw new Error(
-        response.status === 404
-          ? "Repository branch not found."
-          : `GitHub API error: ${response.status}`
-      );
+    try {
+
+        const response = await fetch(API);
+
+        if (!response.ok) {
+            throw new Error(
+                `GitHub API error: ${response.status}`
+            );
+        }
+
+        const data = await response.json();
+
+        if (data.truncated) {
+            throw new Error("Repository file listing was incomplete.");
+        }
+
+        certificates = data.tree
+            .filter(file =>
+                file.type === "blob" &&
+                /\.(png|jpe?g|webp|gif|pdf)$/i.test(file.path)
+            )
+            .map(file => {
+
+                const path = file.path;
+                const filename = path.split("/").pop();
+
+                const custom = descriptions[path] || {};
+
+                const title =
+                    custom.title || formatTitle(filename);
+
+                const category =
+                    custom.category || getCategory(filename);
+
+                const type = /\.pdf$/i.test(filename)
+                    ? "pdf" : "image";
+
+                const encodedPath = path.split("/")
+                    .map(encodeURIComponent)
+                    .join("/");
+
+                return {
+                    filename,
+                    title,
+                    category,
+                    type,
+                    description: custom.description ||
+                        `A learning achievement in ${category}. This certificate reflects my interest in developing knowledge and improving my skills.`,
+                    url: RAW + encodedPath
+                };
+            });
+
+        render();
+
+    } catch (error) {
+
+        grid.innerHTML = `
+            <div class="empty">
+                <h3>Unable to load certificates</h3>
+                ${safe(error.message)}
+                <br>
+                Please check your GitHub repository and try again.
+            </div>
+        `;
     }
-
-    const result = await response.json();
-
-    if (result.truncated) {
-      throw new Error("Repository contains too many files for a complete scan.");
-    }
-
-    const extensions = /\.(png|jpe?g|webp|gif|pdf)$/i;
-
-    certificates = result.tree
-      .filter(item =>
-        item.type === "blob" &&
-        extensions.test(item.path)
-      )
-      .map(item => {
-        const path = item.path;
-        const filename = path.split("/").pop();
-        const custom = customDescriptions[path] || {};
-        const title = custom.title || titleCase(filename);
-        const category = custom.category || guessCategory(filename);
-        const type = /\.pdf$/i.test(filename) ? "pdf" : "image";
-
-        const encodedPath = path.split("/")
-          .map(encodeURIComponent).join("/");
-
-        return {
-          filename,
-          title,
-          category,
-          type,
-          description: custom.description ||
-            makeDescription(title, category),
-          url: RAW + encodedPath
-        };
-      });
-
-    document.getElementById("total").textContent =
-      certificates.length;
-
-    document.getElementById("images").textContent =
-      certificates.filter(c => c.type === "image").length;
-
-    document.getElementById("pdfs").textContent =
-      certificates.filter(c => c.type === "pdf").length;
-
-    render();
-
-    if (!certificates.length) {
-      grid.innerHTML = `
-        <div class="empty">
-          <h3>No certificate files found</h3>
-          Your main branch does not currently contain
-          supported image or PDF files.
-          Upload and commit your certificates, then refresh.
-        </div>`;
-    }
-
-  } catch (error) {
-    grid.innerHTML = `
-      <div class="empty">
-        <h3>Unable to load certificates</h3>
-        ${escapeHTML(error.message)}
-        <br><br>
-        Check your repository visibility and internet connection.
-      </div>`;
-  }
 }
 
 document.getElementById("search")
-  .addEventListener("input", render);
+    .addEventListener("input", render);
 
 document.getElementById("filter")
-  .addEventListener("change", render);
+    .addEventListener("change", render);
 
 document.getElementById("year").textContent =
-  new Date().getFullYear();
+    new Date().getFullYear();
 
 loadCertificates();
+
 </script>
 
 </body>
