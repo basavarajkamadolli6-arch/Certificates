@@ -1,1 +1,601 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Certificates | Basavaraj Kamadolli</title>
+<meta name="description" content="Explore the professional certificates, achievements, training and technical learning journey of Basavaraj Kamadolli, BCA student and aspiring software developer.">
+<meta name="theme-color" content="#0b1730">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f5f7fc;
+  --primary: #2457d6;
+  --dark: #111c35;
+  --muted: #64748b;
+  --white: #ffffff;
+  --border: #e6eaf2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+a { text-decoration: none; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo span { color: var(--primary); }
+
+nav a {
+  color: var(--muted);
+  font-size: 14px;
+  margin-left: 22px;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 85px 8%;
+  color: white;
+  background: linear-gradient(120deg, #101c39, #1c438e, #2457d6);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 750px;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: inline-block;
+  background: #ffffff20;
+  border: 1px solid #ffffff40;
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero h1 span { color: #a9c6ff; }
+
+.hero p {
+  color: #dce7ff;
+  line-height: 1.8;
+  max-width: 650px;
+  font-size: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 21px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.btn-white {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-outline {
+  border: 1px solid #ffffff80;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 65px 25px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: -32px;
+  position: relative;
+}
+
+.stat {
+  background: white;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px #10234b0b;
+}
+
+.stat h3 {
+  font-size: 29px;
+  color: var(--primary);
+}
+
+.stat p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 7px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.toolbar input,
+.toolbar select {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 14px;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.toolbar input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+  border-color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 23px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px #10234b14;
+}
+
+.preview {
+  height: 190px;
+  background: #eaf0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: white;
+}
+
+.pdf-preview {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  background: white;
+}
+
+.pdf-icon {
+  font-size: 50px;
+  color: var(--primary);
+}
+
+.card-body { padding: 20px; }
+
+.category {
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 11px 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  min-height: 42px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 19px;
+}
+
+.card-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 11px 5px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.view {
+  background: var(--primary);
+  color: white;
+}
+
+.download {
+  background: #edf2ff;
+  color: var(--primary);
+}
+
+.empty {
+  text-align: center;
+  padding: 55px 20px;
+  background: white;
+  border-radius: 15px;
+  color: var(--muted);
+  grid-column: 1/-1;
+}
+
+.empty h3 { color: var(--dark); margin-bottom: 10px; }
+
+footer {
+  background: #101c35;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+footer a { color: #a9c6ff; }
+
+@media(max-width:850px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width:600px) {
+  nav { padding: 17px 5%; }
+  nav a { margin-left: 10px; font-size: 11px; }
+  .hero { padding: 65px 6%; }
+  .container { padding: 45px 18px; }
+  .grid { grid-template-columns: 1fr; }
+  .stats { gap: 8px; }
+  .stat { padding: 15px 10px; }
+  .stat h3 { font-size: 22px; }
+  .stat p { font-size: 10px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">BK<span>.</span> Portfolio</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#certificates">Certificates</a>
+    <a href="https://github.com/basavarajkamadolli6-arch" target="_blank">GitHub ↗</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">MY LEARNING JOURNEY · ACHIEVEMENTS</div>
+
+    <h1>Learning Today.<br>
+    <span>Building Tomorrow.</span></h1>
+
+    <p>
+      Hello! I'm Basavaraj Kamadolli, a BCA student and aspiring
+      software developer. This portfolio showcases my certificates,
+      achievements, technical learning and continuous efforts to
+      improve my knowledge and skills.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#certificates" class="btn btn-white">
+        Explore Certificates →
+      </a>
+
+      <a href="https://github.com/basavarajkamadolli6-arch"
+         target="_blank" class="btn btn-outline">
+        Visit My GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="stats">
+    <div class="stat">
+      <h3 id="total">0</h3>
+      <p>Total Certificates</p>
+    </div>
+    <div class="stat">
+      <h3 id="pdfCount">0</h3>
+      <p>PDF Documents</p>
+    </div>
+    <div class="stat">
+      <h3 id="imageCount">0</h3>
+      <p>Certificate Images</p>
+    </div>
+  </section>
+
+  <section id="certificates" style="margin-top:65px">
+
+    <div class="section-heading">
+      <h2>My Certificates</h2>
+      <p>
+        A collection of my completed courses, training programs,
+        certifications and learning achievements.
+      </p>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="search"
+             placeholder="Search certificates...">
+
+      <select id="filter">
+        <option value="all">All Certificates</option>
+        <option value="pdf">PDF Certificates</option>
+        <option value="image">Image Certificates</option>
+      </select>
+    </div>
+
+    <div class="grid" id="certificateGrid">
+      <div class="empty">Loading certificates...</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <h3>Basavaraj Kamadolli</h3>
+  <p>Building skills. Creating opportunities. Growing every day.</p>
+  <p>
+    <a href="https://github.com/basavarajkamadolli6-arch"
+       target="_blank">GitHub</a>
+    &nbsp; | &nbsp;
+    <a href="https://www.linkedin.com/in/basavaraj-kamadolli-305327335/"
+       target="_blank">LinkedIn</a>
+  </p>
+  <p>© <span id="year"></span> Basavaraj Kamadolli. All rights reserved.</p>
+</footer>
+
+<script>
+const USER = "basavarajkamadolli6-arch";
+const REPO = "Certificates";
+const FOLDER = "certificates";
+
+const API =
+ `https://api.github.com/repos/${USER}/${REPO}/contents/${FOLDER}`;
+
+const RAW =
+ `https://raw.githubusercontent.com/${USER}/${REPO}/main/${FOLDER}/`;
+
+// Add certificate descriptions here using the exact file name.
+// Example:
+// "python_certificate.pdf": {
+//   description: "Completed Python programming training.",
+//   category: "Programming"
+// }
+
+const descriptions = {
+  // Add your certificate descriptions here.
+};
+
+let certificates = [];
+
+const grid = document.getElementById("certificateGrid");
+const search = document.getElementById("search");
+const filter = document.getElementById("filter");
+
+function titleFromFile(filename) {
+  return filename
+    .replace(/\.[^/.]+$/, "")
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function getCategory(file) {
+  return descriptions[file]?.category || "Achievement";
+}
+
+function render() {
+  const term = search.value.toLowerCase();
+  const type = filter.value;
+
+  const results = certificates.filter(cert => {
+    const matchesSearch =
+      cert.title.toLowerCase().includes(term) ||
+      cert.description.toLowerCase().includes(term) ||
+      cert.category.toLowerCase().includes(term);
+
+    const matchesType =
+      type === "all" || cert.type === type;
+
+    return matchesSearch && matchesType;
+  });
+
+  if (!results.length) {
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>No certificates found</h3>
+        <p>Upload certificates into the certificates folder
+        or try another search.</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = results.map(cert => {
+    const preview = cert.type === "image"
+      ? `<img src="${cert.url}" alt="${cert.title}" loading="lazy">`
+      : `<div class="pdf-icon">PDF</div>`;
+
+    return `
+      <article class="card">
+        <div class="preview">${preview}</div>
+
+        <div class="card-body">
+          <span class="category">${cert.category}</span>
+          <h3>${cert.title}</h3>
+          <p>${cert.description}</p>
+
+          <div class="card-actions">
+            <a class="view" href="${cert.url}"
+               target="_blank" rel="noopener">
+               View Certificate
+            </a>
+
+            <a class="download" href="${cert.url}"
+               download="${cert.filename}">
+               Download
+            </a>
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+}
+
+async function loadCertificates() {
+  try {
+    const response = await fetch(API);
+
+    if (!response.ok) {
+      throw new Error(
+        response.status === 404
+          ? "Folder not found"
+          : "GitHub API request failed"
+      );
+    }
+
+    const files = await response.json();
+
+    certificates = files
+      .filter(file =>
+        file.type === "file" &&
+        /\.(pdf|png|jpe?g|webp)$/i.test(file.name)
+      )
+      .map(file => {
+        const metadata = descriptions[file.name] || {};
+        const type = /\.pdf$/i.test(file.name)
+          ? "pdf" : "image";
+
+        return {
+          filename: file.name,
+          title: metadata.title || titleFromFile(file.name),
+          description: metadata.description ||
+            "Certificate of learning and achievement. Add a detailed description in the website settings.",
+          category: metadata.category || "Achievement",
+          type,
+          url: RAW + encodeURIComponent(file.name)
+        };
+      });
+
+    document.getElementById("total").textContent =
+      certificates.length;
+
+    document.getElementById("pdfCount").textContent =
+      certificates.filter(c => c.type === "pdf").length;
+
+    document.getElementById("imageCount").textContent =
+      certificates.filter(c => c.type === "image").length;
+
+    render();
+
+  } catch (error) {
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>Certificates are not available yet</h3>
+        <p>${error.message === "Folder not found"
+          ? "Create a folder named certificates in your GitHub repository and upload your certificate files."
+          : "Unable to load certificates. Please check your internet connection or try again later."}
+        </p>
+      </div>`;
+  }
+}
+
+search.addEventListener("input", render);
+filter.addEventListener("change", render);
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+loadCertificates();
+</script>
+
+</body>
+</html>
+
